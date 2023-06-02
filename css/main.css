@@ -1,0 +1,1057 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  background: #000;
+  color: #fff;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.fw-b {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+header .container {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #fff;
+}
+header h1 {
+  margin-right: auto;
+}
+header h1 a {
+  width: 242px;
+  height: 40px;
+  background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true") no-repeat;
+  background-size: contain;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li a {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 20px;
+  transition: all 0.5s;
+}
+header nav ul li a:hover {
+  color: #F18724;
+}
+header nav .moblieList, header nav .closeIcon {
+  display: none;
+  font-size: 32px;
+  line-height: 1;
+}
+header .moblieFooter {
+  display: none;
+  background: #000;
+  border-top: 1px solid #fff;
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    position: relative;
+  }
+  header .container {
+    padding: 28px 12px;
+  }
+  header h1 a {
+    width: 143px;
+    height: 24px;
+  }
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 91px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: calc(100vh - 91px - 205px);
+    background: #000;
+  }
+  header nav ul li a {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 900;
+    margin-left: 0;
+  }
+  header nav .moblieList {
+    display: block;
+  }
+  header .moblieFooter {
+    display: none;
+    position: absolute;
+    top: calc(100vh - 205px);
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+}
+footer .footerContent {
+  display: flex;
+  padding: 80px 0;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+footer .footerMenu li a {
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 1.2;
+  margin: 8px 0;
+  transition: all 0.5s;
+}
+footer .footerMenu li a:hover {
+  color: #F18724;
+}
+footer .footerLogo {
+  margin-left: auto;
+  width: 242px;
+  height: 40px;
+  background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true") no-repeat;
+  background-size: contain;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.footerNav {
+  display: flex;
+  font-weight: 700;
+  padding: 32px 0;
+}
+.footerNav p {
+  color: #fff;
+  margin-right: 100px;
+}
+.footerNav ul {
+  display: flex;
+}
+.footerNav ul a {
+  margin-right: 20px;
+  transition: all 0.5s;
+}
+.footerNav ul a:hover {
+  color: #F18724;
+}
+.footerNav button {
+  margin-left: auto;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.footerNav button:hover {
+  color: #F18724;
+}
+
+@media screen and (max-width: 576px) {
+  footer .footerContent {
+    flex-direction: column-reverse;
+  }
+  footer .footerMenu li a {
+    font-size: 48px;
+  }
+  footer .footerLogo {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  .footerNav {
+    flex-wrap: wrap;
+  }
+  .footerNav ul {
+    order: 1;
+    margin-top: 36px;
+  }
+}
+@keyframes scroll1 {
+  0% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+main section {
+  margin-bottom: 160px;
+}
+main section h3 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+main .hero {
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.2;
+}
+main .hero h2 {
+  font-size: 120px;
+  padding: 40px 0;
+}
+main .hero a {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 100px;
+  padding: 20px 40px;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  transition: all 0.5s;
+}
+main .hero a:hover {
+  color: #F18724;
+  border: 1px solid #F18724;
+}
+main .hero .deco {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+main .hero .deco img {
+  max-width: 180px;
+  opacity: 0;
+}
+main .hero .deco img:nth-of-type(1) {
+  animation: scroll1 8s infinite;
+  animation-delay: 1s;
+}
+main .hero .deco img:nth-of-type(2) {
+  animation: scroll1 8s infinite;
+  animation-delay: 0.5s;
+}
+main .hero .deco img:nth-of-type(3) {
+  animation: scroll1 8s infinite;
+}
+main .service .title {
+  display: flex;
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+main .service .title h3 {
+  min-width: 414px;
+  margin-right: 24px;
+}
+main .service .title p {
+  font-size: 48px;
+}
+main .service .serviceList {
+  display: flex;
+  margin: 0 -10px;
+  color: #fff;
+}
+main .service .serviceList li {
+  margin: 0 10px;
+  padding: 86px 40px 80px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+main .service .serviceList li img {
+  max-width: 66px;
+}
+main .service .serviceList li h4 {
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+main .partner .partnerList {
+  position: relative;
+}
+main .partner .partnerList::before {
+  content: "";
+  width: 101%;
+  height: 110px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(to right, #000 10%, transparent 25%, transparent 75%, #000 90%);
+}
+main .partner .partnerList .partnerLogo {
+  display: flex;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+main .partner .partnerList .logoWall {
+  min-width: 1296px;
+}
+main .partner .partnerList .logo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+main .partner .partnerList .logo img {
+  display: inline-block;
+  max-width: 140px;
+  margin-right: 40px;
+}
+main .partner .partnerList .logo .firstLogo {
+  width: 70px;
+  -o-object-position: right;
+     object-position: right;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .partner .partnerList .logo .lastLogo {
+  width: 70px;
+  -o-object-position: left;
+     object-position: left;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 0;
+}
+main .evaluate .swiper-slide {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px;
+}
+main .evaluate .star {
+  display: flex;
+  margin-bottom: 22px;
+}
+main .evaluate .star img {
+  width: 13.5px;
+  margin-right: 6px;
+}
+main .evaluate .evaluate-content {
+  margin-bottom: 22px;
+}
+main .evaluate .evaluate-user {
+  display: flex;
+}
+main .evaluate .evaluate-user img {
+  width: 48px;
+  margin-right: 16px;
+}
+main .evaluate-slider {
+  --add-bottom: 50px;
+  padding-bottom: var(--add-bottom);
+}
+main .evaluate-slider .swiper-pagination-bullet {
+  background: white;
+}
+main .products {
+  background: #fff;
+  border-radius: 160px;
+  padding: 162px 0;
+}
+main .products h3 {
+  font-size: 80px;
+  text-align: center;
+  color: #000;
+}
+main .products .search {
+  position: relative;
+  margin-bottom: 36px;
+}
+main .products .search img {
+  display: inline;
+  width: 18px;
+  position: absolute;
+  top: 19px;
+  left: 43px;
+}
+main .products .search input {
+  width: 100%;
+  border: 0;
+  background: rgb(242, 242, 242);
+  padding: 20px 43px 20px 63px;
+  border-radius: 16px;
+}
+main .products .productList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+  color: #000;
+}
+main .products .productList li {
+  width: calc(33.3333% - 24px);
+  margin: 12px;
+  border: 1px solid #F2F2F2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+main .products .productList li h4 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+main .products .productList li img {
+  transition: all 0.5s;
+}
+main .products .productList li img:hover {
+  transform: scale(1.2);
+}
+main .products .productList li p {
+  display: flex;
+  margin: 20px 0;
+}
+main .products .productList li p span {
+  margin-left: auto;
+  font-weight: normal;
+}
+main .products .productList li a {
+  margin-left: auto;
+}
+main .products .productList li hr {
+  border: 1px solid #f2f2f2;
+  margin: 0 -32px;
+}
+main .products .productList .productImg {
+  max-height: 292px;
+  overflow: hidden;
+}
+main .products .productList .productInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+  min-height: 255px;
+}
+main .products .productList .productText {
+  font-size: 14px;
+  color: rgb(82, 82, 82);
+  margin-top: 12px;
+  flex-grow: 1;
+}
+main .products .filter {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+main .products .filterBtn, main .products .sortBtn {
+  padding: 20px 40px;
+  border: 1px solid rgb(242, 242, 242);
+  border-radius: 16px;
+  background: #fff;
+  cursor: pointer;
+}
+main .products .filterBtnContent, main .products .sortBtnContent {
+  display: none;
+  padding: 20px 40px;
+  border-radius: 16px;
+  color: #000;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+  margin-top: 16px;
+  position: absolute;
+  z-index: 5;
+}
+main .products .filterBtnContent p, main .products .sortBtnContent p {
+  color: rgb(145, 145, 145);
+  font-weight: 700;
+}
+main .products .filterBtnContent input[type=radio], main .products .sortBtnContent input[type=radio] {
+  display: none;
+}
+main .products .filterBtnContent input:checked ~ .check, main .products .sortBtnContent input:checked ~ .check {
+  display: block;
+}
+main .products .filterBtnContent .tittle, main .products .sortBtnContent .tittle {
+  display: flex;
+  align-items: center;
+  padding: 8px 40px;
+  margin: 0 -40px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+main .products .filterBtnContent .tittle:hover, main .products .sortBtnContent .tittle:hover {
+  background: rgb(242, 242, 242);
+}
+main .products .filterBtnContent .check, main .products .sortBtnContent .check {
+  display: none;
+  margin-left: auto;
+}
+main .products .filterBtnContent {
+  width: 240px;
+  top: 50px;
+  left: 0;
+}
+main .products .filterList {
+  margin: 0 auto;
+}
+main .products .filterList button {
+  color: rgb(145, 145, 145);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: all 0.5s;
+}
+main .products .filterList button:hover, main .products .filterList button.active {
+  background: rgb(242, 242, 242);
+  border-radius: 16px;
+  color: #000;
+  font-weight: 700;
+}
+main .products #sort {
+  position: relative;
+  padding: 20px 40px;
+  border: 1px solid rgb(242, 242, 242);
+  border-radius: 16px;
+}
+main .products .sortBtnContent {
+  width: 144px;
+  top: 50px;
+  right: 0;
+}
+main .products .pagination {
+  display: flex;
+  justify-content: flex-end;
+  color: #000;
+  font-weight: 700;
+  margin-top: 40px;
+}
+main .products .pagination li {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+  line-height: 48px;
+  margin-right: 4px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+main .products .pagination li.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20right.png?raw=true") no-repeat center center;
+}
+main .products .pagination li.next:hover {
+  background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20right.png?raw=true") no-repeat center center;
+}
+main .products .pagination li:hover, main .products .pagination li.active {
+  background: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  main section h3 {
+    font-size: 20px;
+  }
+  main .hero h2 {
+    font-size: 48px;
+  }
+  main .hero h2 span {
+    display: block;
+  }
+  main .hero a {
+    margin-bottom: 180px;
+  }
+  main .hero .deco {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 120px;
+  }
+  main .hero .deco img {
+    width: 33.3333%;
+  }
+  main .service .title {
+    display: block;
+    margin-bottom: 46px;
+  }
+  main .service .title h3 {
+    min-width: 0;
+    font-size: 20px;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  main .service .title p {
+    font-size: 32px;
+  }
+  main .service .serviceList {
+    display: block;
+    margin: 0 auto;
+  }
+  main .service .serviceList li {
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 46px 20px 40px 20px;
+  }
+  main .partner .partnerList .logoWall {
+    animation: scroll 20s linear infinite;
+  }
+  main .evaluate ul {
+    flex-direction: column;
+  }
+  main .evaluate li {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  main .evaluate .star {
+    display: flex;
+    margin-bottom: 22px;
+  }
+  main .evaluate .star img {
+    width: 13.5px;
+    margin-right: 6px;
+  }
+  main .evaluate .evaluate-content {
+    margin-bottom: 22px;
+  }
+  main .evaluate .evaluate-user {
+    display: flex;
+  }
+  main .evaluate .evaluate-user img {
+    width: 48px;
+    margin-right: 16px;
+  }
+  main .products {
+    border-radius: 20px;
+    padding: 80px 0;
+  }
+  main .products h3 {
+    font-size: 32px;
+  }
+  main .products h3 span {
+    display: block;
+  }
+  main .products .search {
+    margin-bottom: 36px;
+  }
+  main .products .search img {
+    display: inline;
+    width: 18px;
+    position: absolute;
+    top: 19px;
+    left: 43px;
+  }
+  main .products .search input {
+    padding: 20px 43px 20px 63px;
+    border-radius: 16px;
+  }
+  main .products .productList {
+    flex-direction: column;
+    margin: 0;
+  }
+  main .products .productList li {
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+  main .products .productList li h4 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 20px;
+  }
+  main .products .productList li .productImg {
+    max-height: 292px;
+    overflow: hidden;
+  }
+  main .products .productList li p {
+    display: flex;
+    margin: 20px 0;
+  }
+  main .products .productList li p span {
+    margin-left: auto;
+    font-weight: normal;
+  }
+  main .products .productList li a {
+    margin-left: auto;
+  }
+  main .products .productList li hr {
+    border: 1px solid #f2f2f2;
+    margin: 0 -32px;
+  }
+  main .products .productList .productInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+    min-height: 255px;
+  }
+  main .products .productList .productText {
+    font-size: 14px;
+    color: rgb(82, 82, 82);
+    margin-top: 12px;
+    flex-grow: 1;
+  }
+  main .products .filter {
+    flex-wrap: wrap;
+  }
+  main .products .filterBtn {
+    margin-right: auto;
+  }
+  main .products .filterBtnContent {
+    display: none;
+    width: 100%;
+    padding: 20px 40px;
+    border-radius: 16px;
+    color: #000;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    margin-top: 16px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 5;
+  }
+  main .products .filterBtnContent p {
+    color: rgb(145, 145, 145);
+    font-weight: 700;
+  }
+  main .products .filterBtnContent input[type=radio] {
+    display: none;
+  }
+  main .products .filterBtnContent input:checked ~ .check {
+    display: block;
+  }
+  main .products .filterBtnContent .tittle {
+    display: flex;
+    align-items: center;
+    padding: 8px 40px;
+    margin: 0 -40px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  main .products .filterBtnContent .tittle:hover {
+    background: rgb(242, 242, 242);
+  }
+  main .products .filterBtnContent .check {
+    display: none;
+    margin-left: auto;
+  }
+  main .products .filterList {
+    margin: 12px auto;
+    order: 1;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  main .products .filterList button {
+    color: rgb(145, 145, 145);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: all 0.5s;
+  }
+  main .products .filterList button:hover, main .products .filterList button.active {
+    background: rgb(242, 242, 242);
+    border-radius: 16px;
+    color: #000;
+    font-weight: 700;
+  }
+  main .products #sort {
+    padding: 20px 40px;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 16px;
+  }
+  main .products .pagination {
+    display: flex;
+    justify-content: flex-end;
+    color: #000;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+  main .products .pagination li {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: #fff;
+    text-align: center;
+    line-height: 48px;
+    margin-right: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  main .products .pagination li.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .products .pagination li.next img {
+    width: 16px;
+  }
+  main .products .pagination li.next:hover {
+    background: #fff;
+  }
+  main .products .pagination li:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+main .priceHero .deco {
+  justify-content: flex-start;
+}
+main .priceHero .heroText {
+  width: 636px;
+  font-size: 48px;
+  margin-left: auto;
+  margin-top: 80px;
+  margin-bottom: 240px;
+}
+main .priceList {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .priceList > li {
+  width: calc(50% - 24px);
+  height: 318px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 16px;
+  padding: 20px 32px;
+  margin: 12px;
+  transition: all 0.5s;
+}
+main .priceList > li:hover {
+  border: 1px solid rgb(255, 255, 255);
+}
+main .priceList h4 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+main .priceList .feature {
+  list-style: disc;
+  margin-bottom: auto;
+  flex-grow: 1;
+}
+main .priceList .priceContent {
+  display: flex;
+  padding: 20px 32px 0;
+  margin: 0 -32px;
+  border-top: 1px solid rgb(82, 82, 82);
+}
+main .priceList .priceContent p {
+  margin-right: auto;
+}
+main .priceList .priceContent a {
+  display: flex;
+  align-items: center;
+}
+main .priceList .priceContent a img {
+  width: 24px;
+  margin-left: 12px;
+}
+main .userTerm .container {
+  display: flex;
+}
+main .userTerm h3 {
+  width: 440px;
+}
+main .userTerm .userTermList li {
+  padding: 40px 0;
+  border-bottom: 1px solid rgb(82, 82, 82);
+}
+main .userTerm .userTermList li:nth-of-type(1) {
+  padding: 0 0 40px 0;
+}
+main .userTerm .userTermList li h4 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+main .userTerm .userTermList li p {
+  font-size: 32px;
+}
+main .fqa .container {
+  display: flex;
+}
+main .fqa h3 {
+  width: 440px;
+}
+main .fqa .fqaList {
+  width: 100%;
+}
+main .fqa .fqaList li {
+  cursor: pointer;
+  border-radius: 16px;
+  border: 1px solid rgb(82, 82, 82);
+  padding: 20px 40px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+main .fqa .fqaList li:hover, main .fqa .fqaList li.active {
+  border: 1px solid rgb(255, 255, 255);
+}
+main .fqa .fqaList li h4 {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+main .fqa .fqaList li h4 img {
+  width: 24px;
+  margin-right: 25px;
+}
+main .fqa .fqaList li p {
+  display: none;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 576px) {
+  main .priceHero .heroText {
+    width: 257px;
+    font-size: 28px;
+    margin-top: 64px;
+    margin-bottom: 260px;
+  }
+  main .priceList > li {
+    width: 100%;
+    height: 318px;
+    border: 1px solid rgb(82, 82, 82);
+    border-radius: 16px;
+    padding: 20px 32px;
+    margin: 0 0 24px 0;
+    transition: all 0.5s;
+  }
+  main .priceList h4 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+  main .priceList .feature {
+    list-style: disc;
+    margin-bottom: auto;
+    flex-grow: 1;
+  }
+  main .priceList .priceContent {
+    display: flex;
+    padding: 20px 32px 0;
+    margin: 0 -32px;
+    border-top: 1px solid rgb(82, 82, 82);
+  }
+  main .priceList .priceContent p {
+    margin-right: auto;
+  }
+  main .priceList .priceContent a {
+    display: flex;
+    align-items: center;
+  }
+  main .priceList .priceContent a img {
+    width: 24px;
+    margin-left: 12px;
+  }
+  main .userTerm .container {
+    flex-direction: column;
+  }
+  main .userTerm h3 {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  main .userTerm .userTermList li h4 {
+    font-size: 32px;
+  }
+  main .userTerm .userTermList li p {
+    font-size: 16px;
+  }
+  main .fqa .container {
+    flex-direction: column;
+  }
+  main .fqa h3 {
+    width: 100%;
+  }
+  main .fqa .fqaList li {
+    padding: 20px;
+  }
+}/*# sourceMappingURL=main.css.map */

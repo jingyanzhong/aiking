@@ -1,0 +1,228 @@
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+body{
+    font-family: $font-family;
+    line-height: 1.5;
+    background: $black-bg;
+    color: $white;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: $white;
+}
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+.fw-b{
+    font-weight: $fw-700;
+}
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 12px;
+    }
+}
+//header style
+header {
+    .container {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #fff;
+    }
+    h1 {
+        margin-right: auto;
+        a{
+            width: 242px;
+            height: 40px;
+            background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true') no-repeat;
+            background-size: contain;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    nav {
+        ul {
+            display: flex;
+            li {
+                a {
+                    font-size: $fz-s;
+                    font-weight: $fw-700;
+                    margin-left: 20px;
+                    transition: all .5s;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .moblieList, .closeIcon {
+            display: none;
+            font-size: $fz-l;
+            line-height: 1;
+        }
+    }
+    .moblieFooter {
+        display: none;
+        background: #000;
+        border-top: 1px solid #fff;
+    }
+    
+}
+@media screen and (max-width: 576px) {
+    header {
+        position: relative;
+        .container {
+            padding: 28px 12px;
+        }
+        h1 {
+            a{
+                width: 143px;
+                height: 24px;
+            }
+        }
+        nav {
+            ul {
+                display: none;
+                // display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                top: 91px;
+                left: 0;
+                right: 0;
+                z-index: 5;
+                height: calc(100vh - 91px - 205px);
+                background: $black-bg;
+                li {
+                    a {
+                        text-align: center;
+                        font-size: $fz-xxl;
+                        font-weight: $fw-900;
+                        margin-left: 0;
+                    }
+                }
+            }
+            .moblieList {
+                display: block;
+            }
+        }
+        .moblieFooter {
+            // display: block;
+            display: none;
+            position: absolute;
+            top: calc(100vh - 205px);
+            left: 0;
+            right: 0;
+            z-index: 5;
+        }
+    }
+}
+//footer style
+footer {
+    .footerContent {
+        display: flex;
+        padding: 80px 0;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+    }
+    .footerMenu {
+        li a {
+            font-weight: $fw-900;
+            font-size: $fz-xxl;
+            line-height: 1.2;
+            margin: 8px 0;
+            transition: all .5s;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+    .footerLogo {
+        margin-left: auto;
+        width: 242px;
+        height: 40px;
+        background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true') no-repeat;
+        background-size: contain;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+.footerNav {
+    display: flex;
+    font-weight: $fw-700;
+    padding: 32px 0;
+    p {
+        color: $white;
+        margin-right: 100px;
+    }
+    ul {
+        display: flex;
+        a {
+            margin-right: 20px;
+            transition: all .5s;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+    button {
+        margin-left: auto;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: $white;
+        font-weight: $fw-700;
+        font-size: $fz-s;
+        transition: all .5s;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer {
+        .footerContent {
+            flex-direction: column-reverse;
+        }
+        .footerMenu {
+            li a {
+                font-size: $fz-xl;
+            }
+        }
+        .footerLogo {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+    }
+    .footerNav {
+        flex-wrap: wrap;
+        ul {
+            order: 1;
+            margin-top: 36px;
+        }
+    }
+}
+
+@keyframes scroll1{
+    0% {transform: translateY(100%)}
+    25% {transform: translateY(100%); opacity: 1;}
+    50% {transform: translateY(0%); opacity: 1;}
+    75% {transform: translateY(0%); opacity: 1;}
+    100% {transform: translateY(-100%); opacity: 0;}
+}
+
+@keyframes scroll {
+    from{transform: translateX(0%)}
+    to{transform: translateX(-100%)}
+}
