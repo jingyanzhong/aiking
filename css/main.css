@@ -988,6 +988,9 @@ main .fqa .fqaList li p {
   display: none;
   margin-top: 24px;
 }
+main .fqa .fqaList li .removeIcon {
+  display: none;
+}
 
 @media screen and (max-width: 576px) {
   main .priceHero .heroText {
