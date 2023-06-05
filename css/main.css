@@ -189,6 +189,8 @@ footer .footerMenu li a:hover {
 }
 footer .footerLogo {
   margin-left: auto;
+}
+footer .footerLogo a {
   width: 242px;
   height: 40px;
   background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true") no-repeat;
@@ -244,6 +246,9 @@ footer .footerLogo {
   }
   .footerNav {
     flex-wrap: wrap;
+  }
+  .footerNav p {
+    margin-right: auto;
   }
   .footerNav ul {
     order: 1;
@@ -344,7 +349,6 @@ main .service .title p {
 }
 main .service .serviceList {
   display: flex;
-  margin: 0 -10px;
   color: #fff;
 }
 main .service .serviceList li {
@@ -366,7 +370,7 @@ main .partner .partnerList {
 }
 main .partner .partnerList::before {
   content: "";
-  width: 101%;
+  width: 100%;
   height: 110px;
   position: absolute;
   left: 0;
@@ -457,18 +461,26 @@ main .products .search img {
   position: absolute;
   top: 19px;
   left: 43px;
+  opacity: 0.7;
 }
 main .products .search input {
   width: 100%;
   border: 0;
   background: rgb(242, 242, 242);
-  padding: 20px 43px 20px 63px;
+  padding: 20px 43px 20px 70px;
   border-radius: 16px;
+}
+main .products .search input::-moz-placeholder {
+  color: rgb(145, 145, 145);
+  font-size: 16px;
+}
+main .products .search input::placeholder {
+  color: rgb(145, 145, 145);
+  font-size: 16px;
 }
 main .products .productList {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -12px;
   color: #000;
 }
 main .products .productList li {
@@ -527,11 +539,21 @@ main .products .filter {
   margin-bottom: 40px;
 }
 main .products .filterBtn, main .products .sortBtn {
+  display: flex;
+  align-items: center;
   padding: 20px 40px;
   border: 1px solid rgb(242, 242, 242);
   border-radius: 16px;
   background: #fff;
+  font-size: 16px;
   cursor: pointer;
+}
+main .products .filterBtn .filterIcon, main .products .sortBtn .filterIcon {
+  margin-left: 8px;
+}
+main .products .filterBtn img, main .products .sortBtn img {
+  width: 16px;
+  margin-left: 8px;
 }
 main .products .filterBtnContent, main .products .sortBtnContent {
   display: none;
@@ -578,6 +600,7 @@ main .products .filterList {
   margin: 0 auto;
 }
 main .products .filterList button {
+  font-size: 16px;
   color: rgb(145, 145, 145);
   border: none;
   background: transparent;
@@ -633,6 +656,27 @@ main .products .pagination li:hover, main .products .pagination li.active {
   background: #000;
   color: #fff;
 }
+main .userService h3 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+main .userService a {
+  width: 188px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 16px;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+main .userService img {
+  display: inline-block;
+  width: 24px;
+}
 
 @media screen and (max-width: 576px) {
   main section h3 {
@@ -679,6 +723,9 @@ main .products .pagination li:hover, main .products .pagination li.active {
   }
   main .partner .partnerList .logoWall {
     animation: scroll 20s linear infinite;
+  }
+  main .partner .partnerList .logo {
+    margin-bottom: 12px;
   }
   main .evaluate ul {
     flex-direction: column;
@@ -850,22 +897,6 @@ main .products .pagination li:hover, main .products .pagination li.active {
     font-weight: 700;
     margin-top: 40px;
   }
-  main .products .pagination li {
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
-    background: #fff;
-    text-align: center;
-    line-height: 48px;
-    margin-right: 4px;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-  main .products .pagination li.next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   main .products .pagination li.next img {
     width: 16px;
   }
@@ -881,7 +912,7 @@ main .priceHero .deco {
   justify-content: flex-start;
 }
 main .priceHero .heroText {
-  width: 636px;
+  max-width: 636px;
   font-size: 48px;
   margin-left: auto;
   margin-top: 80px;
@@ -923,6 +954,9 @@ main .priceList .priceContent {
 }
 main .priceList .priceContent p {
   margin-right: auto;
+}
+main .priceList .priceContent span {
+  color: rgb(145, 145, 145);
 }
 main .priceList .priceContent a {
   display: flex;

@@ -298,6 +298,7 @@ function openMenu() {
     menuFooter.style.display = 'block';
     moblieMenuCloseBtn.style.display = 'block';
     moblieMenuBtn.style.display = 'none';
+    document.body.style.overflowY = 'hidden';
 }
 
 function closeMenu() {
@@ -307,6 +308,7 @@ function closeMenu() {
     menuFooter.style.display = 'none';
     moblieMenuCloseBtn.style.display = 'none';
     moblieMenuBtn.style.display = 'block';
+    document.body.style.overflowY = 'auto';
 }
 
 function backToTop() {

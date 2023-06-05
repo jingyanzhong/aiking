@@ -148,13 +148,15 @@ footer {
     }
     .footerLogo {
         margin-left: auto;
-        width: 242px;
-        height: 40px;
-        background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true') no-repeat;
-        background-size: contain;
-        text-indent: 101%;
-        overflow: hidden;
-        white-space: nowrap;
+        a{
+            width: 242px;
+            height: 40px;
+            background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true') no-repeat;
+            background-size: contain;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
 }
 .footerNav {
@@ -207,6 +209,9 @@ footer {
     }
     .footerNav {
         flex-wrap: wrap;
+        p {
+            margin-right: auto;
+        }
         ul {
             order: 1;
             margin-top: 36px;

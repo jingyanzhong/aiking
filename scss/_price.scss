@@ -4,7 +4,7 @@ main {
             justify-content: flex-start;
         }
         .heroText {
-            width: 636px;
+            max-width: 636px;
             font-size: $fz-xl;
             margin-left: auto;
             margin-top: 80px;
@@ -45,6 +45,9 @@ main {
             border-top: 1px solid rgba(82,82,82,1);
             p {
                 margin-right: auto;
+            }
+            span {
+                color: rgba(145,145,145,1);
             }
             a {
                 display: flex;
