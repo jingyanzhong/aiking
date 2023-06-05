@@ -294,19 +294,23 @@ function removeActive() {
 function openMenu() {
     const menuDom = document.querySelector('header nav ul');
     const menuFooter = document.querySelector('.moblieFooter');
+    const hiddenM = document.querySelector('.hidden-m');
     menuDom.style.display = 'flex';
     menuFooter.style.display = 'block';
     moblieMenuCloseBtn.style.display = 'block';
     moblieMenuBtn.style.display = 'none';
+    hiddenM.style.display = 'none';
 }
 
 function closeMenu() {
     const menuDom = document.querySelector('header nav ul');
     const menuFooter = document.querySelector('.moblieFooter');
+    const hiddenM = document.querySelector('.hidden-m');
     menuDom.style.display = 'none';
     menuFooter.style.display = 'none';
     moblieMenuCloseBtn.style.display = 'none';
     moblieMenuBtn.style.display = 'block';
+    hiddenM.style.display = 'block';
 }
 
 function backToTop() {
