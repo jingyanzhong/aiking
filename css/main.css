@@ -593,7 +593,7 @@ main .products .filterBtnContent .check, main .products .sortBtnContent .check {
 }
 main .products .filterBtnContent {
   width: 240px;
-  top: 50px;
+  top: 53px;
   left: 0;
 }
 main .products .filterList {
@@ -621,9 +621,12 @@ main .products #sort {
   border-radius: 16px;
 }
 main .products .sortBtnContent {
-  width: 144px;
-  top: 50px;
+  width: 170px;
+  top: 53px;
   right: 0;
+}
+main .products .sortBtnContent .tittle {
+  justify-content: center;
 }
 main .products .pagination {
   display: flex;
@@ -726,9 +729,6 @@ main .userService img {
   }
   main .partner .partnerList .logo {
     margin-bottom: 12px;
-  }
-  main .evaluate ul {
-    flex-direction: column;
   }
   main .evaluate li {
     width: 100%;
@@ -836,7 +836,7 @@ main .userService img {
     background: #fff;
     margin-top: 16px;
     position: absolute;
-    top: 50px;
+    top: 53px;
     left: 0;
     z-index: 5;
   }

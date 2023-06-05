@@ -335,7 +335,7 @@ main {
         }
         .filterBtnContent {
             width: 240px;
-            top: 50px;
+            top: 53px;
             left: 0;
         }
         .filterList {
@@ -365,9 +365,12 @@ main {
             border-radius: 16px;
         }
         .sortBtnContent {
-            width: 144px;
-            top: 50px;
+            width: 170px;
+            top: 53px;
             right: 0;
+            .tittle {
+                justify-content: center;
+            }
         }
         .pagination {
             display: flex;
@@ -507,9 +510,6 @@ main {
         }
 
         .evaluate {
-            ul {
-                flex-direction: column;
-            }
             li {
                 width: calc(100%);
                 margin: 0 0 20px 0;
@@ -623,7 +623,7 @@ main {
                 background: #fff;
                 margin-top: 16px;
                 position: absolute;
-                top: 50px;
+                top: 53px;
                 left: 0;
                 z-index: 5;
 
