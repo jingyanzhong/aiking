@@ -13,7 +13,7 @@ main {
         color: $white;
         font-weight: $fw-900;
         line-height: 1.2;
-
+        
         h2 {
             font-size: 120px;
             padding: 40px 0;
@@ -149,9 +149,12 @@ main {
 
     .evaluate {
         .swiper-slide {
+            display: flex;
+            flex-direction: column;
             background: rgba(255, 255, 255, 0.08);
             border-radius: $border-radius-16;
             padding: 40px;
+            height: auto;
         }
         .star {
             display: flex;
@@ -163,6 +166,7 @@ main {
         }
         .evaluate-content {
             margin-bottom: 22px;
+            flex-grow: 1;
         }
         .evaluate-user {
             display: flex;
@@ -385,7 +389,7 @@ main {
                 border-radius: $border-radius-16;
                 background: #fff;
                 text-align: center;
-                line-height: 48px;
+                line-height: 3;
                 margin-right: 4px;
                 cursor: pointer;
                 transition: all .5s;
@@ -601,7 +605,6 @@ main {
                     font-size: 14px;
                     color: rgba(82, 82, 82, 1);
                     margin-top: 12px;
-                    flex-grow: 1;
                 }
             }
 

@@ -412,9 +412,12 @@ main .partner .partnerList .logo .lastLogo {
   margin-right: 0;
 }
 main .evaluate .swiper-slide {
+  display: flex;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 40px;
+  height: auto;
 }
 main .evaluate .star {
   display: flex;
@@ -426,6 +429,7 @@ main .evaluate .star img {
 }
 main .evaluate .evaluate-content {
   margin-bottom: 22px;
+  flex-grow: 1;
 }
 main .evaluate .evaluate-user {
   display: flex;
@@ -641,7 +645,7 @@ main .products .pagination li {
   border-radius: 16px;
   background: #fff;
   text-align: center;
-  line-height: 48px;
+  line-height: 3;
   margin-right: 4px;
   cursor: pointer;
   transition: all 0.5s;
@@ -818,7 +822,6 @@ main .userService img {
     font-size: 14px;
     color: rgb(82, 82, 82);
     margin-top: 12px;
-    flex-grow: 1;
   }
   main .products .filter {
     flex-wrap: wrap;
