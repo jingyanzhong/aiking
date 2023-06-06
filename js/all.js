@@ -85,6 +85,14 @@ function categoryFilter(e) {
         return
     }
     const nowBtn = e.target;
+    // 取消篩選項目的checked
+    aiModel.forEach(item => {
+        item.checked = false;
+    })
+    category.forEach(item => {
+        item.checked = false;
+    })
+    
     filterListAllBtn.forEach(item => {
         item.removeAttribute('class');
     });
